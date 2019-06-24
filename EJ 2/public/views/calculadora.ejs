@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title> Calculadora </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/calculadora.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="backgroundCalculadora">
+            <div class="cuentas">
+                <h1> Calculadora </h1>
+                <form class="formulario" method="post" action="/calcular">
+                    <input name="numero1">
+                    <select name="simbolo">
+                        <option value="suma"> + </option>
+                        <option value="resta"> - </option>
+                        <option value="multiplicacion"> x </option>
+                        <option value="division"> / </option>
+                    </select>
+                    <input name="numero2">
+                    <button class="sacarResultado" type="submit"> = </button>
+                    <% if(resultado!==null && resultado!==undefined){ %>
+                    <%= resultado %>
+                    <% } %>
+                </form>
+            </div>
+            <% if(error !== null && error !== undefined) { %>
+            <div class="error"> <%= error %> </div>
+            <% } %>
+            <div class="historial">
+                <h3> Historial </h3>
+                <% if (cuentas.length > 0  && cuentas !== undefined) { %>
+                <ul class="listaCuentas">
+                    <% cuentas.forEach(function(cuenta, i){ %>
+                    <li class="cuenta">
+                        <div class="cuentaContainer">
+                            <form class="cuenta" method="post" action="/borrar/<%=i%>">
+                                <div class="texto"> <%= cuenta %> </div>
+                                <button class="eliminarCuenta" type="submit"> BORRAR </button>
+                            </form>
+                        </div>
+                    </li>
+                    <% }); %>
+                </ul>
+                <% }  else { %>
+                <div class="listaVacia"> No se han realizado cuentas previas </div>
+                <% } %>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

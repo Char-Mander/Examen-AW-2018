@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <title> Calculadora </title>
+    <link rel="stylesheet" type="text/css" media="screen" href="../css/recetas.css" />
+</head>
+
+<body>
+
+</body>
+<div class="container">
+    <h1> Recetas </h1>
+    <div class="nuevaReceta">
+        <form class="anadirReceta" method="post" action="/anadirReceta">
+            <div class="atributoReceta">
+                <div class="atributo"> Nombre: </div> <input name="nombre">
+            </div>
+            <div class="atributoReceta">
+                <div class="atributo"> Preparación: </div> <input name="preparacion">
+            </div>
+            <div class="atributoReceta">
+                <div class="atributo"> Ingredientes (nombres separados por comas): </div> <input name="ingredientes">
+            </div>
+            <div class="atributoReceta">
+                <div class="atributo"> Cantidad de ingredientes (números separados por comas): </div> <input
+                    name="cantidad">
+            </div>
+            <button class="anadirReceta" type="submit"> AÑADIR RECETA </button>
+        </form>
+    </div>
+    <% if (recetas.length > 0  && recetas !== undefined) { %>
+    <ul class="listaRecetas">
+        <% recetas.forEach(function(receta, i){ %>
+        <li class="receta">
+            <form class="receta" method="post" action="/borrar/<%=i%>">
+                <div class="texto"> <%= receta.nombre %> </div>
+                <div class="texto"> <%= receta.preparacion %> </div>
+            </form>
+        </li>
+        <% }); %>
+    </ul>
+    <% }  else { %>
+    <div class="listaVacia"> No hay recetas </div>
+    <% } %>
+
+    <% if(error!==null){ %>
+    <div class="error"></div>
+    <%}%>
+</div>
+
+</html>

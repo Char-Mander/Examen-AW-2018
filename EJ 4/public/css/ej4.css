@@ -1,0 +1,76 @@
+body {
+    background-color: black;
+    margin: 0px;
+}
+
+div.tablero {
+    margin: 2em;
+    font-size: 40px;
+    font-family: Courier New, Courier, monospace;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#teclado {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+}
+
+#display {
+    padding-top: 10px;
+    height: 1.2em;
+    background-color: #0d110e;
+    border: 2px ridge black;
+    color: greenyellow;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+div.tecla {
+    background-color: #3a3a3a;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+    border: 2px ridge black;
+}
+
+div.numero {
+    color: rgb(107, 176, 255);
+    text-shadow: 0 0 0.2em rgb(107, 176, 255);
+}
+
+div.borrar {
+    color: rgb(255, 107, 114);
+    text-shadow: 0 0 0.2em rgb(255, 107, 114);
+    grid-column: 2 / span 2;
+}
+
+div.tecla:hover {
+    background-color: #636363;
+}
+
+div.acceso {
+    margin: 0px;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    font-size: 40px;
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    left: 0px;
+    top: 100px;
+    width: 100%;
+    position: fixed;
+    display: none;
+}
+
+#permitido {
+    background: linear-gradient(rgb(0, 20, 0), rgb(0, 50, 0), rgb(0, 20, 0));
+}
+
+#denegado {
+    background: linear-gradient(rgb(20, 0, 0), rgb(50, 0, 0), rgb(20, 0, 0));
+}

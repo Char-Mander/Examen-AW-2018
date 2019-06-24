@@ -1,0 +1,121 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(0, 27, 102);
+}
+
+div.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: rgb(0, 27, 102);
+    color:white;
+}
+
+div.backgroundCalculadora{
+    margin: 5%;
+    padding: 2%;
+    width: 50vw;
+    height: auto;
+    justify-content: center;
+    align-content: center;
+    background-color: rgb(48, 61, 180);
+}
+
+div.cuentas{
+    margin-bottom: 5%;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+h1{
+    margin: 2%;
+}
+
+input{
+    width: 80px;
+    height: 20px;
+    border-radius: 2px;
+}
+
+select{
+    width: auto;
+    height: 24px;
+    border-radius: 2px;
+    border:none;
+}
+
+button.sacarResultado{
+    width: 40px;
+    height: 24px;
+    border-radius: 2px;
+    cursor: pointer
+}
+
+div.resultado{
+    width: 10%
+}
+
+div.error{
+    color: red;
+    width: 100%;
+    height: 4vw;
+}
+
+div.historial{
+    text-align: center;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    color: white;
+}
+
+li{
+    margin: 1%;
+    padding: 2%;
+    background-color: rgb(142, 143, 65);
+    list-style: none;
+    border-radius: 2px;
+}
+
+div.cuentaContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+form.cuenta{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+button.eliminarCuenta{
+    background-color: rgb(65, 87, 48);
+    color:  rgb(201, 204, 0);
+    border: none;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2px;
+}
+
+button.eliminarCuenta:hover{
+    background-color: rgb(50, 66, 38);
+    cursor: pointer;
+}
+
+button.eliminarCuenta:active{
+    background-color: rgb(46, 58, 37);
+    cursor: pointer;
+}

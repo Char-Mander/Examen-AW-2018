@@ -1,0 +1,95 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: rgb(183, 192, 159);
+    justify-content: center;
+    align-content: center;
+}
+
+div.container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+    justify-items: center;
+    text-align: center;
+    background-color: rgb(134, 139, 121);
+    color:rgb(66, 45, 12);
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    margin: 2%;
+}
+
+div.nuevaReceta{
+    display: flex;
+}
+
+form.anadirReceta{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+div.atributoReceta{
+    width: 91%;
+    padding: 1%;
+    margin: 1%;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+}
+
+input{
+    width: 200px;
+    height: 15px;
+}
+
+div.atributo{
+    margin-right: 1%;
+}
+
+
+button.anadirReceta{
+    background-color: rgb(65, 87, 48);
+    color:  rgb(201, 204, 0);
+    border: none;
+    padding: 1%;
+    width: 30%;
+    border-radius: 2px;
+}
+
+button.anadirReceta:hover{
+    background-color: rgb(50, 66, 38);
+    cursor: pointer;
+}
+
+button.anadirReceta:active{
+    background-color: rgb(46, 58, 37);
+    cursor: pointer;
+}
+
+div.listaVacia{
+    margin:2%;
+}
+
+li{
+    width: 100%;
+    display:flex;
+}
+
+form.receta{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+}
